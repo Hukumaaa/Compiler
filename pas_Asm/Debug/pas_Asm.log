@@ -1,0 +1,12 @@
+﻿  lex.cpp
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.h(16,27): warning C4091: typedef : пропускается слева от "Statement", когда ни одна переменная не объявлена
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.h(20,51): warning C4091: typedef : пропускается слева от "Output", когда ни одна переменная не объявлена
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.h(26,100): warning C4091: typedef : пропускается слева от "TokenType", когда ни одна переменная не объявлена
+  syn.cpp
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.cpp(283,19): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.h(16,27): warning C4091: typedef : пропускается слева от "Statement", когда ни одна переменная не объявлена
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.h(20,51): warning C4091: typedef : пропускается слева от "Output", когда ни одна переменная не объявлена
+C:\Users\Никита\Desktop\kkk\pas_asm\lex.h(26,100): warning C4091: typedef : пропускается слева от "TokenType", когда ни одна переменная не объявлена
+  Создание кода...
+C:\Users\Никита\Desktop\kkk\pas_asm\node.h(11,56): warning C4091: typedef : пропускается слева от "NodeType", когда ни одна переменная не объявлена
+  pas_Asm.vcxproj -> C:\Users\Никита\Desktop\kkk\pas_asm\Debug\pas_Asm.exe
