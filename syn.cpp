@@ -41,7 +41,7 @@ Node* Syn::Identifier(void)
 {
     string identifierValue = _lex->CurrentTokenValue();
 
-    Node* tempNode = tempNode = new Node(NodeType::USING_VARIABLE, identifierValue);
+    Node* tempNode  = new Node(NodeType::USING_VARIABLE, identifierValue);
     _lex->NextToken();
 
     return tempNode;

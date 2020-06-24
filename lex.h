@@ -13,7 +13,7 @@ using namespace std;
 typedef enum Statement { S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, 
 							S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, 
 							S21, S22, S23, S24, S25, S26, S27, S28, S29, S30, 
-							S31, S32, S33, S34}; // Набор состояний
+							S31, S32, S33, S34, S35}; // Набор состояний
 
 typedef enum Output { O0, O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, 
 						O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, 
