@@ -295,10 +295,10 @@ void Lex::PrevToken()
     }
 }
 
-bool Lex::LastToken()
+TokenType Lex::LastToken()
 {
-	if (_curToken == _tokens.size()) return true;
-	else return false;
+	int count = _tokens.size()-1;
+	return _tokens[count]._type;
  }
 
 string Lex::CurrentTokenValue()

@@ -14,6 +14,7 @@ Syn::~Syn()
 void Syn::Parse()
 {
     _tree->root = Program();
+	if (_lex->LastToken() != TokenType::DOT) Error("Not found .");
     _tree->Analyze();
 }
 
@@ -364,8 +365,9 @@ Node* Syn::ExpressionStatement(void)
 	if (_lex->CurrentTokenType() != TokenType::SEMICOLON)
 	{
 		
-		if (_lex->CurrentTokenType() != TokenType::KW_VAR && _lex->CurrentTokenType() != TokenType::KW_ELSE )
+		if (_lex->CurrentTokenType() != TokenType::KW_VAR && _lex->CurrentTokenType() != TokenType::KW_ELSE && _lex->CurrentTokenType() != TokenType::DOT)
 			Error(";");
+		
 	}
     _lex->NextToken();
 
@@ -378,7 +380,7 @@ Node* Syn::StatementList(void)
     Node* tempNode = nullptr;
 
     while (_lex->CurrentTokenType() != TokenType::KW_END &&
-            _lex->CurrentTokenType() != TokenType::KW_ELSE)
+            _lex->CurrentTokenType() != TokenType::KW_ELSE && _lex->CurrentTokenType()!=TokenType::DOT)
     {
         Node* tempStatement = Statement();
         tempNode = new Node(NodeType::STATEMENT_LIST, "", tempNode, tempStatement);
@@ -389,7 +391,6 @@ Node* Syn::StatementList(void)
         _lex->NextToken();
     }
 
-
     return tempNode;
 }
 
@@ -399,7 +400,7 @@ Node* Syn::Statement(void)
 		temp = temp+1;
 	if (_lex->CurrentTokenType() == TokenType::KW_END)
 		temp = temp - 1;*/
-
+	
     if (_lex->CurrentTokenType()==TokenType::KW_VAR)
         flag=1;
      if (_lex->CurrentTokenType() == TokenType::KW_IF)
